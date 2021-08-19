@@ -1,0 +1,83 @@
+/*
+@mixin font-face($font-name,$file-name, $weight:normal){
+    @font-face{
+        font-family: quote($font-name);
+        src: url(`${file-name}`.eot);
+        src: url(`${file-name}`.eot?$iefix) format(embedded-opentype)
+        url($file-name+".woff") format("woff")
+        url($file-name+".ttf") format("ttf");
+    }
+}
+
+*/
+#vidscreen {
+  background-color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45em;
+  height: 30em;
+}
+
+div {
+  text-align: center;
+}
+
+#belt {
+  background-image: linear-gradient(#18345f, #224a88);
+  width: 100%;
+  height: 4em;
+  margin-bottom: 2em;
+  display: inline-flex;
+}
+#belt div {
+  margin: auto;
+  width: 15%;
+  height: 3em;
+  background-image: linear-gradient(#224a88, #27569c);
+  border: solid #1d3f73;
+  text-align: center;
+}
+
+#mainnav {
+  background-image: linear-gradient(#316cc5, #27569c);
+  width: 100%;
+  height: 4.5em;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated;
+  display: inline-flex;
+  margin: 0;
+}
+#mainnav img {
+  margin-left: 8em;
+  margin-top: 0.23em;
+}
+#mainnav div {
+  margin-top: 0.23em;
+  text-align: center;
+  margin-left: 0.5em;
+  text-rendering: optimizeSpeed;
+  font-size: 3em;
+  color: white;
+  text-shadow: 0.04em 0.04em black;
+}
+
+#centerscreen {
+  width: 100%;
+  height: 30em;
+  background-color: #e4e4e4;
+  display: block;
+}
+
+body {
+  background-color: #f3f3f3;
+  background-repeat: repeat;
+  background-size: 10%;
+  background-position: center;
+  margin: 0;
+}
+body img {
+  width: 4em;
+  height: 4em;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,89 @@
+//center any block element :D 
+
+@mixin push--autoCenter{
+    margin: {
+        left:auto;
+        right:auto;
+
+    }
+}
+
+//scalable images requiring ratio, images or backgrounds
+@mixin centertxt(){
+    text-align: center;
+}
+@mixin responsive-ratio($x,$y,$pseudo:false){
+    $padding : unquote(($y/$x)*100 + "%");
+    @if $pseudo {
+        &:before{
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top:$padding;
+        }
+
+padding-top:$padding;    }
+}
+
+
+@mixin centerscreen(){
+
+
+width: 100%;
+height: 30em;
+}
+
+@mixin videoscreen($height, $width){
+ 
+ 
+  background-color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: $height;
+  height: $width;
+}
+@mixin fade($type){
+    @if $type == 'hide'{
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 1s opacity 1s;
+    }
+    @else if $type == 'show'{
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 1s opacity 1s;
+    
+    }
+}
+
+
+/*
+@mixin font-face($font-name,$file-name, $weight:normal){
+    @font-face{
+        font-family: quote($font-name);
+        src: url(`${file-name}`.eot);
+        src: url(`${file-name}`.eot?$iefix) format(embedded-opentype)
+        url($file-name+".woff") format("woff")
+        url($file-name+".ttf") format("ttf");
+    }
+}
+
+*/
+@mixin cover-background{
+    background-repeat: repeat;
+    background-size:10%;
+    background-position:center;
+}
+
+
+@mixin beforeAfter(
+    
+    $width:100%,$height:100%,$display:block,$pos:absolute,$content:""){
+        content:$content;
+        display:$display;
+        position:$pos;
+        @include box($width, $height);
+    }
+
+
+   
