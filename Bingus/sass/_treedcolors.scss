@@ -1,0 +1,58 @@
+
+@mixin colorpicker($color){
+   
+    p{color : lighten($color, 100%);}
+
+    width: 200px;
+    height: 200px;
+    
+    background-image: linear-gradient($color, adjust-hue($color, -60deg), adjust-hue($color, -120deg), adjust-hue($color, -180deg));
+    background-color: darken($color, 10%);
+    }
+
+
+
+@mixin navbaro($color, $height){
+    background-image: linear-gradient($color, darken($color, 10%));
+    width: 100%;
+    height: 4.5em;
+    image-rendering: pixelated;
+    display: inline-flex;
+    margin:0;
+    
+    //sitecon 
+    img{
+        
+        margin-left: 8em;
+        margin-top: .23em
+        
+    }
+    div{
+        margin-top: .23em;
+        text-align: center;
+        margin-left: .5em;
+        text-rendering: optimizeSpeed;
+        font-size: 3em;
+        color: white;
+        text-shadow: .04em .04em black;
+    }
+}
+
+@mixin navbelt($color, $height){
+    background-image: linear-gradient(darken($color, 25%), darken($color, 15%));
+    width: 100%;
+    height: $height;
+    margin-bottom: 2em;
+    display: inline-flex;
+    div{
+        margin:auto;
+        width:15%;
+        height:3em;
+        background-image: linear-gradient(darken($color, 15%), darken($color, 10%));
+        border: solid darken($color, 20%);
+        text-align: center;
+        
+       
+    }
+}
+

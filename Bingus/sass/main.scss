@@ -1,0 +1,51 @@
+
+@use '../sass/_mixin' as *;
+@use '../sass/_treedcolors' as *;
+
+#vidscreen{
+    @include videoscreen(45em, 30em);
+    
+
+}
+
+div{
+    @include centertxt();
+}
+#homescreen{
+    
+}
+#belt{
+    @include navbelt(rgb(49, 108, 197), 4em);
+}
+#mainnav{
+    @include navbaro(rgb(49, 108, 197), 4.5em);
+}
+
+#centerscreen{
+    @include centerscreen();
+    background-color: rgb(228, 228, 228);
+    display: block;
+}
+
+
+
+
+body {
+
+   background-color: rgb(243, 243, 243);
+    @include cover-background();
+    margin: 0;
+
+    img{
+        width:4em;
+        height:4em;
+    }
+        
+    
+    div{
+       
+     
+    }
+
+}
+
